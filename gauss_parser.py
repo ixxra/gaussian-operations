@@ -43,10 +43,10 @@ def parse(command):
     With the above example, it would be formated like this:
 
         {
-            'target_row': 2, 
+            'target_row': 1, 
             'op': '+',
-            'added_row': 2,
-            'pivot_row': 1,
+            'added_row': 1,
+            'pivot_row': 0,
             factor: 3.0
         }
 
@@ -71,11 +71,11 @@ def parse(command):
     if target is None:
         raise SyntaxError()
     
-    target_row = int(target.group()[1:])
+    target_row = int(target.group()[1:]) - 1
     
     try:
         row1, op, row2 = re.match(ADITION, rhs).groups()
-        added_row = int(row1)
+        added_row = int(row1) - 1
 
     except:
         raise SyntaxError()
@@ -84,13 +84,13 @@ def parse(command):
     try:
         number, row3 = re.match(PRODUCT, row2).groups()
         factor = float(number)
-        pivot_row = int(row3)
+        pivot_row = int(row3) - 1
 
     except:
         try:
             row3, = re.match(ROW, row2).groups()
             factor = None
-            pivot_row = int(row3)
+            pivot_row = int(row3) - 1
         except:
             raise SyntaxError()
     
