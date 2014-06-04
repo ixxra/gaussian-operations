@@ -12,6 +12,10 @@ class OperationException(Exception):
     pass
 
 
+class StructureException(Exception):
+    pass
+
+
 def validate_type_3(structure):
     op = structure['op']
     target_row = structure['target_row']
@@ -28,3 +32,15 @@ def validate_type_3(structure):
 
     if op not in ('+', '-'):
         raise OperationError("Rows can only be added, rested")
+
+    keys = set(structure.keys())
+    expected_keys = set(('target_row', 'op', 'added_row', 'pivot_row'))
+
+    if keys != expected_keys:
+        expected_keys.add('factor')
+        if keys != expected_keys:
+            raise StructureException('Corrupted structure')
+
+
+
+
