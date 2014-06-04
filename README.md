@@ -13,7 +13,7 @@ which is standard notation for *matrix operations* in linear algebra, and see wh
 
 This library pretend just to do so. 
 
-Certainly, out there in the wild, there should very good software to accomplish this task. But this project is twofold:
+Certainly, out there in the wild, there should be very good software to accomplish this task. But this project is twofold:
 
 1. It aims to ease my linear algebra students life.
 2. It aims to help my computer science students to learn python.
