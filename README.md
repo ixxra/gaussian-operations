@@ -11,7 +11,7 @@ R2 -> R2 + 3 * R1
 
 which is standard notation for *matrix operations* in linear algebra, and see what happens with the matrix?
 
-This library pretend just to do so. 
+This library pretends just to do so. 
 
 Certainly, out there in the wild, there should be very good software to accomplish this task. But this project is twofold:
 
