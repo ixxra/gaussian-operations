@@ -18,4 +18,4 @@ Certainly, out there in the wild, there should be very good software to accompli
 1. It aims to ease my linear algebra students life.
 2. It aims to help my computer science students to learn python.
 
-Your are more than welcome participate.
+Your are more than welcome to participate.
